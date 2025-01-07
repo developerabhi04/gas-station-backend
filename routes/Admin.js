@@ -6,7 +6,6 @@ const router = express.Router();
 
 
 router.post("/verify", adminLogin);
-
 router.get("/logout", adminLogout);
 
 // router.use(adminOnly);

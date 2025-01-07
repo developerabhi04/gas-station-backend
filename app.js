@@ -4,7 +4,7 @@ import { connectDb } from './config/db.js';
 import { errorMiddleware } from './middleware/error.js';
 import cookieParser from 'cookie-parser';
 import cors from "cors";
-// import cloudinary from "cloudinary";
+import cloudinary from "cloudinary";
 
 
 // routes
@@ -28,11 +28,12 @@ const adminSecretKey = process.env.ADMIN_SECRET_KEY;
 // database
 connectDb(uri);
 
-// cloudinary.config({
-//     cloud_name: process.env.CLOUD_NAME,
-//     api_key: process.env.CLOUD_API_KEY,
-//     api_secret: process.env.CLOUD_API_SECRET,
-// });
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_API_KEY,
+    api_secret: process.env.CLOUD_API_SECRET,
+});
+
 
 
 // middleware
