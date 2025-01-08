@@ -11,6 +11,7 @@ import cloudinary from "cloudinary";
 import apply from './routes/Apply.js';
 import adminRoutes from './routes/Admin.js';
 import needRoutes from './routes/message.js';
+import date from './routes/Date.js';
 
 
 
@@ -56,6 +57,7 @@ app.get("/", (req, res) => {
 
 // Routes
 app.use("/api/v1/apply", apply);
+app.use("/api/v1/date", date);
 app.use("/api/v1/need", needRoutes);
 app.use("/api/v1/admin", adminRoutes);
 
